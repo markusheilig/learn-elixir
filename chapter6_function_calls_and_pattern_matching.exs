@@ -56,3 +56,23 @@ defmodule Chop do
 end
 
 Chop.guess(273, 1..1000)
+
+# ModulesAndFunctions-7
+
+# convert float to string with 2 decimals (Erlang)
+:erlang.float_to_list(223.44456, decimals: 2)
+
+# get value of operating system environment variable (Elixir)
+System.get_env("PWD")
+
+# return extension component of a file name (Elixir)
+Path.extname("dave/test.exs")
+
+# return the process's current working directory (Elixir)
+System.cwd()
+
+# convert a string containing JSON into Elixir data structures
+# e.g. https://github.com/devinus/poison library
+
+# execute a command in your operating system's shell
+System.cmd("whoami", [])
