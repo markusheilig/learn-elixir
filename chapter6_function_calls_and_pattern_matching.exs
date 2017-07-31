@@ -35,3 +35,24 @@ end
 
 IO.puts "Sum from 1 to 10 is #{MyModule.sum(10)}"
 IO.puts "Greatest Common Divisor of 45 and 105 is #{MyModule.gcd(45, 105)}"
+
+# ModulesAndFunctions-6
+defmodule Chop do
+    
+  def guess(number, left..right) when number == left or number == right do
+    IO.puts "#{number}"    
+  end
+
+  def guess(number, left..right) when number > left and number < right do        
+    middle = div(left+right, 2)    
+    IO.puts "Is it #{middle}"
+    if number >= middle do
+      guess(number, middle..right)
+    else
+      guess(number, left..middle)
+    end    
+  end    
+
+end
+
+Chop.guess(273, 1..1000)
